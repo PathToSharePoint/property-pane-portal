@@ -4,6 +4,6 @@ Publishing steps:
 - npm run build
 - cp package.json ./lib
 - cp README.md ./lib
-- cp assets ./lib
+- cp -r assets ./lib
 - cd lib
 - npm publish
