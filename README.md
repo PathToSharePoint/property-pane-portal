@@ -129,6 +129,7 @@ property-pane-portal | [Christophe Humbert](https://github.com/PathToSharePoint)
 
 Version|Date|Comments
 -------|----|--------
+0.3.0|April 10, 2022|Accommodate multiple Property Pane Portals in a same web part.
 0.2.1|Jan 17, 2022|Expanded README
 
 ## Help

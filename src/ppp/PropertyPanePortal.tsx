@@ -14,7 +14,10 @@ export const PropertyPanePortal: React.FunctionComponent<IPropertyPanePortalProp
     // We'll force a re-render if needed when the hosts are in place
     const [, setPropertyPanePortalRefresh] = React.useState(new Date().toISOString());
 
-    propertyPaneHostsStore.forcePropertyPanePortalUpdate[props.context.instanceId] = setPropertyPanePortalRefresh;
+    React.useEffect(() => {
+        propertyPaneHostsStore.forcePropertyPanePortalUpdate[props.context.instanceId] = propertyPaneHostsStore.forcePropertyPanePortalUpdate[props.context.instanceId] || [];
+        propertyPaneHostsStore.forcePropertyPanePortalUpdate[props.context.instanceId].push(setPropertyPanePortalRefresh);
+    },[]);
 
     const portals = [];
 
